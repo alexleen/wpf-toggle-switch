@@ -1,0 +1,223 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfToggleSwitch">
+
+    <Style x:Key="StyleEllipseButton" TargetType="{x:Type Ellipse}">
+        <Setter Property="Stroke" Value="Gray"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+    </Style>
+
+    <Style x:Key="StyleEllipseGreyButton" TargetType="{x:Type Ellipse}" BasedOn="{StaticResource StyleEllipseButton}">
+        <Setter Property="Fill">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#FFFFFF" Offset="0"/>
+                    <GradientStop Color="#BBBBBB" Offset="0.567"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="StyleSliderButtonLabel" TargetType="{x:Type Label}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+    </Style>
+
+    <Style x:Key="StyleSliderButtonSideLabel" TargetType="{x:Type local:ToggleSwitch}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ToggleSwitch}">
+                    <Grid x:Name="mainGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="2" Name="_borderOn" Background="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{TemplateBinding ButtonWidth}" Height="{TemplateBinding ButtonWidth}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3" />
+                            <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="ForestGreen" BorderBrush="Gray" BorderThickness="0,1,0,1" Panel.ZIndex="1"/>
+                            <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{TemplateBinding ButtonWidth}" Height="{TemplateBinding ButtonWidth}" Style="{StaticResource StyleEllipseButton}" Fill="ForestGreen" Panel.ZIndex="0"/>
+                        </Grid>
+                        <Label Grid.Row="0" Grid.Column="0" Name="_labelOn" Content="{TemplateBinding OnLabel}" Style="{StaticResource StyleSliderButtonLabel}" Foreground="Black"/>
+
+                        <Grid Grid.Column="2" Name="_borderOff" Background="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{TemplateBinding ButtonWidth}" Height="{TemplateBinding ButtonWidth}"  VerticalAlignment="Stretch" Fill="Crimson" Stroke="Gray" Panel.ZIndex="0"/>
+                            <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="Crimson" BorderBrush="Gray" BorderThickness="0,1,0,1" Panel.ZIndex="1"/>
+                            <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{TemplateBinding ButtonWidth}" Height="{TemplateBinding ButtonWidth}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3"/>
+                        </Grid>
+                        <Label Grid.Row="0" Grid.Column="0" Name="_labelOff" Content="{TemplateBinding OffLabel}" Style="{StaticResource StyleSliderButtonLabel}" Foreground="Black"/>
+                    </Grid>
+
+                    <!-- triggers toggle visual appearance -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="_labelOff" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="_borderOff" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="_labelOn" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="_borderOn" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="_labelOff" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="_borderOff" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="_labelOn" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="_borderOn" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>    
+    
+    <Style x:Key="StyleSliderButton" TargetType="{x:Type local:ToggleSwitch}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ToggleSwitch}">
+                    <Grid x:Name="mainGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Name="_borderOn" Background="Transparent" Width="{TemplateBinding Width}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{TemplateBinding ButtonWidth}" Height="{TemplateBinding ButtonWidth}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3" />
+                            <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="ForestGreen" BorderBrush="Gray" BorderThickness="0,1,0,1" Panel.ZIndex="1"/>
+                            <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Name="_labelOn" Content="{TemplateBinding OnLabel}" Style="{StaticResource StyleSliderButtonLabel}" Panel.ZIndex="2"/>
+                            <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{TemplateBinding ButtonWidth}" Height="{TemplateBinding ButtonWidth}" Style="{StaticResource StyleEllipseButton}" Fill="ForestGreen" Panel.ZIndex="0"/>
+                        </Grid>
+
+                        <Grid Grid.Column="0" Name="_borderOff" Background="Transparent" Width="{TemplateBinding Width}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{TemplateBinding ButtonWidth}" Height="{TemplateBinding ButtonWidth}"  VerticalAlignment="Stretch" Fill="Crimson" Stroke="Gray" Panel.ZIndex="0"/>
+                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Name="_labelOff" Content="{TemplateBinding OffLabel}" Style="{StaticResource StyleSliderButtonLabel}" Panel.ZIndex="2"/>
+                            <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="Crimson" BorderBrush="Gray" BorderThickness="0,1,0,1" Panel.ZIndex="1"/>
+                            <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{TemplateBinding ButtonWidth}" Height="{TemplateBinding ButtonWidth}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3"/>
+                        </Grid>
+                </Grid>
+
+                    <!-- triggers toggle visual appearance -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="_borderOff" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="_borderOn" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="_borderOff" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="_borderOn" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="StyleBorderGreyButton" TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#FFFFFF" Offset="0"/>
+                    <GradientStop Color="#BBBBBB" Offset="0.567"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush" Value="Gray"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+    </Style>
+
+    <Style x:Key="StyleSliderButtonRectangular" TargetType="{x:Type local:ToggleSwitch}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ToggleSwitch}">
+                    <Grid x:Name="mainGrid" Background="Transparent" HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Name="_borderOn" Background="ForestGreen" CornerRadius="0" BorderBrush="Gray" BorderThickness="1" VerticalAlignment="Stretch">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Row="0" Grid.Column="0" CornerRadius="0" Style="{StaticResource StyleBorderGreyButton}"/>
+                                <Label Grid.Row="1" Grid.Column="1" Name="_labelOn" Content="{TemplateBinding OnLabel}" Style="{StaticResource StyleSliderButtonLabel}" />
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Column="0" Name="_borderOff" Background="Crimson" CornerRadius="0" BorderBrush="Gray" BorderThickness="1" VerticalAlignment="Stretch">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Name="_labelOff" Content="{TemplateBinding OffLabel}" Style="{StaticResource StyleSliderButtonLabel}" />
+                                <Border Grid.Row="0" Grid.Column="1" CornerRadius="0" Style="{StaticResource StyleBorderGreyButton}"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <!-- triggers toggle visual appearance -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="_borderOff" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="_borderOn" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="_borderOff" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="_borderOn" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
