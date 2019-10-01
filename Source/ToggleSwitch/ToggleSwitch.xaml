@@ -33,6 +33,7 @@
             <Setter Property="Padding" Value="0"/>
         </Style>
 
+        <!--Slider with side label-->
         <Style x:Key="StyleSliderButtonSideLabel" TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -98,6 +99,7 @@
             </Setter>
         </Style>    
         
+        <!--Circular slider-->
         <Style x:Key="StyleSliderButton" TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -171,6 +173,7 @@
             <Setter Property="VerticalAlignment" Value="Stretch"/>
         </Style>
 
+        <!--Rectangular Slider-->
         <Style x:Key="StyleSliderButtonRectangular" TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -225,5 +228,6 @@
             </Setter>
         </Style>
     </UserControl.Resources>
+
     <ToggleButton Style="{StaticResource StyleSliderButton}"></ToggleButton>
 </UserControl>

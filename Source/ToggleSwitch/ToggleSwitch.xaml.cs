@@ -11,6 +11,7 @@ namespace ToggleSwitch
         public ToggleSwitch()
         {
             InitializeComponent();
+            DataContext = this;
         }
 
         private double mButtonWidth;
@@ -60,23 +61,6 @@ namespace ToggleSwitch
                 }
 
                 mOffLabel = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool mIsChecked;
-
-        public bool IsChecked
-        {
-            get => mIsChecked;
-            set
-            {
-                if (value == mIsChecked)
-                {
-                    return;
-                }
-
-                mIsChecked = value;
                 OnPropertyChanged();
             }
         }
