@@ -1,12 +1,11 @@
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Windows.Controls;
 using ToggleSwitch.Properties;
 
 namespace ToggleSwitch
 {
-    public partial class ToggleSwitch : UserControl, INotifyPropertyChanged
+    public partial class ToggleSwitch : INotifyPropertyChanged
     {
         public ToggleSwitch()
         {
@@ -14,19 +13,19 @@ namespace ToggleSwitch
             DataContext = this;
         }
 
-        private double mButtonWidth;
+        private double mDiameter;
 
-        public double ButtonWidth
+        public double Diameter
         {
-            get => mButtonWidth;
+            get => mDiameter;
             set
             {
-                if (Math.Abs(value - mButtonWidth) < double.Epsilon)
+                if (Math.Abs(value - mDiameter) < double.Epsilon)
                 {
                     return;
                 }
 
-                mButtonWidth = value;
+                mDiameter = value;
                 OnPropertyChanged();
             }
         }
@@ -68,7 +67,7 @@ namespace ToggleSwitch
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

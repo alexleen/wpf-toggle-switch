@@ -55,9 +55,9 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{Binding ButtonWidth}" Height="{Binding ButtonWidth}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3" />
+                                <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{Binding Diameter}" Height="{Binding Diameter}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3" />
                                 <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="ForestGreen" BorderBrush="Gray" BorderThickness="0,1,0,1" Panel.ZIndex="1"/>
-                                <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{Binding ButtonWidth}" Height="{Binding ButtonWidth}" Style="{StaticResource StyleEllipseButton}" Fill="ForestGreen" Panel.ZIndex="0"/>
+                                <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{Binding Diameter}" Height="{Binding Diameter}" Style="{StaticResource StyleEllipseButton}" Fill="ForestGreen" Panel.ZIndex="0"/>
                             </Grid>
                             <Label Grid.Row="0" Grid.Column="0" Name="_labelOn" Content="{Binding OnLabel}" Style="{StaticResource StyleSliderButtonLabel}" Foreground="Black"/>
 
@@ -72,9 +72,9 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{Binding ButtonWidth}" Height="{Binding ButtonWidth}"  VerticalAlignment="Stretch" Fill="Crimson" Stroke="Gray" Panel.ZIndex="0"/>
+                                <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{Binding Diameter}" Height="{Binding Diameter}"  VerticalAlignment="Stretch" Fill="Crimson" Stroke="Gray" Panel.ZIndex="0"/>
                                 <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="Crimson" BorderBrush="Gray" BorderThickness="0,1,0,1" Panel.ZIndex="1"/>
-                                <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{Binding ButtonWidth}" Height="{Binding ButtonWidth}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3"/>
+                                <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{Binding Diameter}" Height="{Binding Diameter}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3"/>
                             </Grid>
                             <Label Grid.Row="0" Grid.Column="0" Name="_labelOff" Content="{Binding OffLabel}" Style="{StaticResource StyleSliderButtonLabel}" Foreground="Black"/>
                         </Grid>
@@ -108,7 +108,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Grid Grid.Column="0" Name="_borderOn" Background="Transparent" Width="{TemplateBinding Width}">
+                            <Grid Grid.Column="0" Name="_borderOn" Background="Transparent" Width="{Binding Width}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
@@ -119,13 +119,13 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{Binding ButtonWidth}" Height="{Binding ButtonWidth}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3" />
+                                <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{Binding Diameter}" Height="{Binding Diameter}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3" />
                                 <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="ForestGreen" BorderBrush="Gray" BorderThickness="0,1,0,1" Panel.ZIndex="1"/>
                                 <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Name="_labelOn" Content="{Binding OnLabel}" Style="{StaticResource StyleSliderButtonLabel}" Panel.ZIndex="2"/>
-                                <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{Binding ButtonWidth}" Height="{Binding ButtonWidth}" Style="{StaticResource StyleEllipseButton}" Fill="ForestGreen" Panel.ZIndex="0"/>
+                                <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{Binding Diameter}" Height="{Binding Diameter}" Style="{StaticResource StyleEllipseButton}" Fill="ForestGreen" Panel.ZIndex="0"/>
                             </Grid>
 
-                            <Grid Grid.Column="0" Name="_borderOff" Background="Transparent" Width="{TemplateBinding Width}">
+                            <Grid Grid.Column="0" Name="_borderOff" Background="Transparent" Width="{Binding Width}">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
@@ -136,12 +136,12 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{Binding ButtonWidth}" Height="{Binding ButtonWidth}"  VerticalAlignment="Stretch" Fill="Crimson" Stroke="Gray" Panel.ZIndex="0"/>
+                                <Ellipse Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="{Binding Diameter}" Height="{Binding Diameter}"  VerticalAlignment="Stretch" Fill="Crimson" Stroke="Gray" Panel.ZIndex="0"/>
                                 <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Name="_labelOff" Content="{Binding OffLabel}" Style="{StaticResource StyleSliderButtonLabel}" Panel.ZIndex="2"/>
                                 <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="Crimson" BorderBrush="Gray" BorderThickness="0,1,0,1" Panel.ZIndex="1"/>
-                                <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{Binding ButtonWidth}" Height="{Binding ButtonWidth}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3"/>
+                                <Ellipse Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="{Binding Diameter}" Height="{Binding Diameter}"  Style="{StaticResource StyleEllipseGreyButton}" Panel.ZIndex="3"/>
                             </Grid>
-                    </Grid>
+                        </Grid>
 
                         <!-- triggers toggle visual appearance -->
                         <ControlTemplate.Triggers>
@@ -229,5 +229,5 @@
         </Style>
     </UserControl.Resources>
 
-    <ToggleButton Style="{StaticResource StyleSliderButton}"></ToggleButton>
+    <ToggleButton Style="{StaticResource StyleSliderButton}" />
 </UserControl>
