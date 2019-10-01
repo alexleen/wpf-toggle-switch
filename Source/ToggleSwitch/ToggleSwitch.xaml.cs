@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Media;
 using ToggleSwitch.Properties;
 
 namespace ToggleSwitch
@@ -60,6 +61,40 @@ namespace ToggleSwitch
                 }
 
                 mOffLabel = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private Brush mOnBackground = Brushes.Green;
+
+        public Brush OnBackground
+        {
+            get => mOnBackground;
+            set
+            {
+                if (value == mOnBackground)
+                {
+                    return;
+                }
+
+                mOnBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private Brush mOffBackground = Brushes.Red;
+
+        public Brush OffBackground
+        {
+            get => mOffBackground;
+            set
+            {
+                if (value == mOffBackground)
+                {
+                    return;
+                }
+
+                mOffBackground = value;
                 OnPropertyChanged();
             }
         }
