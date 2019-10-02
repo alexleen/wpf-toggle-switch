@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <toggleswitch:ToggleSwitch Width="100" HorizontalAlignment="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <toggleswitch:CircularToggleSwitch Grid.Row="0" Width="100" HorizontalAlignment="Center"/>
+        <toggleswitch:CircularToggleSwitchSideLabel Grid.Row="1" Width="100" HorizontalAlignment="Center"/>
+        <toggleswitch:RectangularToggleSwitch Grid.Row="2" Width="100" HorizontalAlignment="Center"/>
     </Grid>
 </Window>

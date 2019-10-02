@@ -6,9 +6,9 @@ using ToggleSwitch.Properties;
 
 namespace ToggleSwitch
 {
-    public partial class ToggleSwitch : INotifyPropertyChanged
+    public partial class RectangularToggleSwitch : INotifyPropertyChanged
     {
-        public ToggleSwitch()
+        public RectangularToggleSwitch()
         {
             InitializeComponent();
         }
