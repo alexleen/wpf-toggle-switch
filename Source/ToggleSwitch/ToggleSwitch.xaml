@@ -185,14 +185,13 @@
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*"/>
-                                        <RowDefinition />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <Border Grid.Row="0" Grid.Column="0" CornerRadius="0" Style="{StaticResource StyleBorderGreyButton}"/>
-                                    <Label Grid.Row="1" Grid.Column="1" Name="_labelOn" Content="{Binding OnLabel}" Style="{StaticResource StyleSliderButtonLabel}" />
+                                    <Label Grid.Row="0" Grid.Column="1" Name="_labelOn" Content="{Binding OnLabel}" Style="{StaticResource StyleSliderButtonLabel}" />
                                 </Grid>
                             </Border>
 
@@ -228,5 +227,15 @@
         </Style>
     </UserControl.Resources>
 
-    <ToggleButton Style="{StaticResource StyleSliderButton}" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <ToggleButton Grid.Row="0" Style="{StaticResource StyleSliderButtonSideLabel}" />
+        <ToggleButton Grid.Row="1" Style="{StaticResource StyleSliderButton}" />
+        <ToggleButton Grid.Row="2" Style="{StaticResource StyleSliderButtonRectangular}" />
+    </Grid>
 </UserControl>
