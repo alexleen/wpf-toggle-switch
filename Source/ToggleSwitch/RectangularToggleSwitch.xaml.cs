@@ -1,4 +1,3 @@
-using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
@@ -11,23 +10,6 @@ namespace ToggleSwitch
         public RectangularToggleSwitch()
         {
             InitializeComponent();
-        }
-
-        private double mDiameter = 20;
-
-        public double Diameter
-        {
-            get => mDiameter;
-            set
-            {
-                if (Math.Abs(value - mDiameter) < double.Epsilon)
-                {
-                    return;
-                }
-
-                mDiameter = value;
-                OnPropertyChanged();
-            }
         }
 
         private string mOnLabel = "On";
