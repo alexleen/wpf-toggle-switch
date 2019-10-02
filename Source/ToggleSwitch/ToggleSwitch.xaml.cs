@@ -11,10 +11,9 @@ namespace ToggleSwitch
         public ToggleSwitch()
         {
             InitializeComponent();
-            DataContext = this;
         }
 
-        private double mDiameter;
+        private double mDiameter = 20;
 
         public double Diameter
         {
@@ -31,7 +30,7 @@ namespace ToggleSwitch
             }
         }
 
-        private string mOnLabel;
+        private string mOnLabel = "On";
 
         public string OnLabel
         {
@@ -48,7 +47,7 @@ namespace ToggleSwitch
             }
         }
 
-        private string mOffLabel;
+        private string mOffLabel = "Off";
 
         public string OffLabel
         {

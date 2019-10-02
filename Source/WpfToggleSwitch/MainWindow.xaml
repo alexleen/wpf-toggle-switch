@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <toggleswitch:ToggleSwitch OnLabel="foo" OffLabel="bar" Diameter="20" Width="120" HorizontalAlignment="Center"/>
+        <toggleswitch:ToggleSwitch Width="100" HorizontalAlignment="Center"/>
     </Grid>
 </Window>
