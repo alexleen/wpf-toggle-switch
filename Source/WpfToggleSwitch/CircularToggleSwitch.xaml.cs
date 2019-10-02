@@ -2,13 +2,13 @@ using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
-using ToggleSwitch.Properties;
+using WpfToggleSwitch.Properties;
 
-namespace ToggleSwitch
+namespace WpfToggleSwitch
 {
-    public partial class CircularToggleSwitchSideLabel : INotifyPropertyChanged
+    public partial class CircularToggleSwitch : INotifyPropertyChanged
     {
-        public CircularToggleSwitchSideLabel()
+        public CircularToggleSwitch()
         {
             InitializeComponent();
         }

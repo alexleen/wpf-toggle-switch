@@ -1,33 +1,15 @@
-using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
-using ToggleSwitch.Properties;
+using WpfToggleSwitch.Properties;
 
-namespace ToggleSwitch
+namespace WpfToggleSwitch
 {
-    public partial class CircularToggleSwitch : INotifyPropertyChanged
+    public partial class RectangularToggleSwitch : INotifyPropertyChanged
     {
-        public CircularToggleSwitch()
+        public RectangularToggleSwitch()
         {
             InitializeComponent();
-        }
-
-        private double mDiameter = 20;
-
-        public double Diameter
-        {
-            get => mDiameter;
-            set
-            {
-                if (Math.Abs(value - mDiameter) < double.Epsilon)
-                {
-                    return;
-                }
-
-                mDiameter = value;
-                OnPropertyChanged();
-            }
         }
 
         private string mOnLabel = "On";

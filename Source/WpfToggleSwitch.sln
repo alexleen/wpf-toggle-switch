@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{25C7AA5B-C8C0-4B63-9D9E-F5F58A53A815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleSwitch", "ToggleSwitch\ToggleSwitch.csproj", "{C91A45A3-13AE-48C3-8693-AB577FF3C215}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfToggleSwitch", "WpfToggleSwitch\WpfToggleSwitch.csproj", "{C91A45A3-13AE-48C3-8693-AB577FF3C215}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

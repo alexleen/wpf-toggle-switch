@@ -7,8 +7,8 @@
         <ProjectGuid>{C91A45A3-13AE-48C3-8693-AB577FF3C215}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>ToggleSwitch</RootNamespace>
-        <AssemblyName>ToggleSwitch</AssemblyName>
+        <RootNamespace>WpfToggleSwitch</RootNamespace>
+        <AssemblyName>WpfToggleSwitch</AssemblyName>
         <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>

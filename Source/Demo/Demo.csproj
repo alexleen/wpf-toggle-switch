@@ -81,9 +81,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ToggleSwitch\ToggleSwitch.csproj">
+    <ProjectReference Include="..\WpfToggleSwitch\WpfToggleSwitch.csproj">
       <Project>{c91a45a3-13ae-48c3-8693-ab577ff3c215}</Project>
-      <Name>ToggleSwitch</Name>
+      <Name>WpfToggleSwitch</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

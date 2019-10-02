@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:toggleswitch="clr-namespace:ToggleSwitch;assembly=ToggleSwitch"
+        xmlns:WpfToggleSwitch="clr-namespace:WpfToggleSwitch;assembly=WpfToggleSwitch"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
@@ -13,8 +13,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
-        <toggleswitch:CircularToggleSwitch Grid.Row="0" Width="100" HorizontalAlignment="Center"/>
-        <toggleswitch:CircularToggleSwitchSideLabel Grid.Row="1" Width="100" HorizontalAlignment="Center"/>
-        <toggleswitch:RectangularToggleSwitch Grid.Row="2" Width="100" HorizontalAlignment="Center"/>
+        <WpfToggleSwitch:CircularToggleSwitch Grid.Row="0" Width="100" HorizontalAlignment="Center"/>
+        <WpfToggleSwitch:CircularToggleSwitchSideLabel Grid.Row="1" Width="100" HorizontalAlignment="Center"/>
+        <WpfToggleSwitch:RectangularToggleSwitch Grid.Row="2" Width="100" HorizontalAlignment="Center"/>
     </Grid>
 </Window>
