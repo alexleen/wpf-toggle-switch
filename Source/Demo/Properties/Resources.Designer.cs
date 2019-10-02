@@ -41,7 +41,7 @@ namespace WpfToggleSwitch.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WpfToggleSwitch.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Demo.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
 

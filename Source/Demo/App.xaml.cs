@@ -1,4 +1,4 @@
-﻿namespace WpfToggleSwitch
+﻿namespace Demo
 {
     /// <summary>
     /// Interaction logic for App.xaml
