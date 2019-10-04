@@ -90,5 +90,5 @@
         </Style>
     </UserControl.Resources>
     
-    <ToggleButton Style="{StaticResource StyleSliderButton}" />
+    <ToggleButton Style="{StaticResource StyleSliderButton}" IsChecked="{Binding IsChecked}"/>
 </UserControl>

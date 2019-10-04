@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Media;
 using WpfToggleSwitch.Properties;
 
@@ -97,6 +98,20 @@ namespace WpfToggleSwitch
                 OnPropertyChanged();
             }
         }
+
+        public bool IsChecked
+        {
+            get
+            {
+                return (bool)GetValue(IsCheckedProperty);
+            }
+            set
+            {
+                SetValue(IsCheckedProperty, value);
+            }
+        }
+
+        public static readonly DependencyProperty IsCheckedProperty = DependencyProperty.Register(nameof(IsChecked), typeof(bool), typeof(CircularToggleSwitch), new PropertyMetadata(false));
 
         public event PropertyChangedEventHandler PropertyChanged;
 

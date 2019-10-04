@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WpfToggleSwitch")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A simple WPF toggle switch (on/off button).")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("alexleen")]
 [assembly: AssemblyProduct("WpfToggleSwitch")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright ©  2019 Alex Leendertsen")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

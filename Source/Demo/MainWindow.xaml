@@ -1,20 +1,16 @@
 ﻿<Window x:Class="Demo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:WpfToggleSwitch="clr-namespace:WpfToggleSwitch;assembly=WpfToggleSwitch"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        
-        <WpfToggleSwitch:CircularToggleSwitch Grid.Row="0" Width="100" HorizontalAlignment="Center"/>
-        <WpfToggleSwitch:CircularToggleSwitchSideLabel Grid.Row="1" Width="100" HorizontalAlignment="Center"/>
-        <WpfToggleSwitch:RectangularToggleSwitch Grid.Row="2" Width="100" HorizontalAlignment="Center"/>
-    </Grid>
+        Title="MainWindow" 
+        Height="350" 
+        Width="525">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label>Circular:</Label>
+            <WpfToggleSwitch:CircularToggleSwitch Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding On}"/>
+        </StackPanel>
+        <WpfToggleSwitch:CircularToggleSwitchSideLabel Width="70" HorizontalAlignment="Center"/>
+        <WpfToggleSwitch:RectangularToggleSwitch Width="60" HorizontalAlignment="Center"/>
+    </StackPanel>
 </Window>
